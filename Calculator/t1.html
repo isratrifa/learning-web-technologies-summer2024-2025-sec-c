@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 40px;
+        }
+        #display {
+            width: 220px;
+            height: 40px;
+            font-size: 20px;
+            margin-bottom: 10px;
+            padding: 5px;
+            text-align: right;
+        }
+        button {
+            width: 40px;
+            height: 40px;
+            font-size: 19px;
+            margin: 2px;
+            cursor: pointer;
+        }
+    </style>
+        <div id="ui"></div>
+    
+
+        <script>
+            const ans = document.createElement("input");
+            document.getElementById("ui").appendChild(ans);
+
+            document.getElementById("ui").appendChild(document.createElement("br"));
+            document.getElementById("ui").appendChild(document.createElement("br"));
+
+          
+            const b1 = document.createElement("button");
+            b1.innerHTML = "1";
+            document.getElementById("ui").appendChild(b1);
+
+            
+            const b2 = document.createElement("button");
+            b2.innerHTML = "2";
+            document.getElementById("ui").appendChild(b2); 
+           
+            const b3 = document.createElement("button");
+            b3.innerHTML = "3";
+            document.getElementById("ui").appendChild(b3);
+
+            const bp = document.createElement("button");
+            bp.innerHTML = "+";
+            document.getElementById("ui").appendChild(bp); 
+
+            document.getElementById("ui").appendChild(document.createElement("br"));
+            
+      
+
+            const b4= document.createElement("button");
+            b4.innerHTML = "4";
+            document.getElementById("ui").appendChild(b4); 
+
+            const b5 = document.createElement("button");
+            b5.innerHTML = "5";
+            document.getElementById("ui").appendChild(b5); 
+
+            const b6 = document.createElement("button");
+            b6.innerHTML = "6";
+            document.getElementById("ui").appendChild(b6); 
+
+            const bs = document.createElement("button");
+            bs.innerHTML = "_";
+            document.getElementById("ui").appendChild(bs); 
+
+            
+            document.getElementById("ui").appendChild(document.createElement("br"));
+
+            const b7 = document.createElement("button");
+            b7.innerHTML = "7";
+            document.getElementById("ui").appendChild(b7); 
+
+            const b8 = document.createElement("button");
+            b8.innerHTML = "8";
+            document.getElementById("ui").appendChild(b8); 
+
+            const b9 = document.createElement("button");
+            b9.innerHTML = "9";
+            document.getElementById("ui").appendChild(b9);
+
+            const bm = document.createElement("button");
+            bm.innerHTML = "X";
+            document.getElementById("ui").appendChild(bm); 
+
+            document.getElementById("ui").appendChild(document.createElement("br"));
+
+            const b0 = document.createElement("button");
+            b0.innerHTML = "0";
+            document.getElementById("ui").appendChild(b0); 
+            
+
+            const be = document.createElement("button");
+            be.innerHTML = "=";
+            document.getElementById("ui").appendChild(be); 
+
+            const bac = document.createElement("button");
+            bac.innerHTML = "ac";
+            document.getElementById("ui").appendChild(bac); 
+            const bd = document.createElement("button");
+            bd.innerHTML = "/";
+            document.getElementById("ui").appendChild(bd); 
+            document.getElementById("ui").appendChild(document.createElement("br"));
+
+            b1.addEventListener("click",function(){insert("1");});
+             b2.addEventListener("click",function(){insert("2");});
+              b3.addEventListener("click",function(){insert("3");});
+               b4.addEventListener("click",function(){insert("4");});
+               b5.addEventListener("click",function(){insert("5");});
+                 b6.addEventListener("click",function(){insert("6");});
+             b7.addEventListener("click",function(){insert("7");});
+              b8.addEventListener("click",function(){insert("8");});
+               b9.addEventListener("click",function(){insert("9");});
+                bm.addEventListener("click",function(){insert("*");});
+                 b0.addEventListener("click",function(){insert("0");});
+                  bd.addEventListener("click",function(){insert("/");});
+                   be.addEventListener("click",function(){insert("1");});
+                    bac.addEventListener("click",function(){insert("1");});
+
+
+        </script> 
+    </body>
+</html>
