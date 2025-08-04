@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        <form>
+            <table>
+                <tr>
+                    <td>
+                      <label>Name</label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      <input type="text" name="name" value="" id="name" onblur="validateName()">
+                      <p id="nerror"></p>
+
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                     <input type="submit" name="" value="Submit">
+                     <p id="success"></p>
+
+                    </td>
+                </tr>
+            </table>
+            <hr>
+        </form>
+
+       
+           
+       
+
+
+        <script>
+function validateName() 
+{
+    let name = document.getElementById("name").value;
+    let nerror = document.getElementById("nerror");
+    let firstChar = name[0];
+        let firstCharCode = firstChar.charCodeAt(0);
+
+    if (name.length === 0) {
+        nerror.innerHTML = "Please type username first!";
+        return false;
+    } 
+    else if (name.length < 2) {
+        nerror.innerHTML = "Name must be at least 2 characters long";
+        return false;
+    } 
+    else if(!((firstCharCode >= 65 && firstCharCode <= 90) || 
+              (firstCharCode >= 97 && firstCharCode <= 122))) {
+            nerror.innerHTML = "Name must start with a letter";
+            return false;
+        }
+    else{
+         for (let i = 0; i < name.length; i++) {
+            let charCode = name[i].charCodeAt(0);
+            if (
+                !((charCode >= 65 && charCode <= 90) ||  
+                  (charCode >= 97 && charCode <= 122) || 
+                  charCode === 45 ||                     
+                  charCode === 46)                       
+            ) {
+                nerror.innerHTML = "Name can contain only a-z, A-Z, dot (.) or dash (-)";
+                return false;
+            }
+        }
+
+        
+        nerror.innerHTML = "";
+        return true;
+    }
+
+    }
+
+     
+    
+
+        </script>
+
+        <form>
+            <table>
+                <tr>
+                    <td>
+                      <label>Email</label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                      <input type="text">
+
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                     <button type="submit">Submit</button>
+
+                    </td>
+                </tr>
+            </table>
+            <hr>
+
+        </form>
+
+
+
+          <form>
+            <table>
+                <tr>
+                    <td>
+                      <label>Gender</label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                     <table border="1">
+                        <tr>
+                            <tr>
+                                <input type="radio">male
+                                <input type="radio">Female
+                                <input type="radio">Others
+                            </tr>
+                        </tr>
+
+                     </table>
+
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                     <button type="submit">Submit</button>
+
+                    </td>
+                </tr>
+            </table>
+
+            <hr>
+
+        </form>
+
+
+
+         <form>
+            <table>
+                <tr>
+                    <td>
+                      <label>Date Of Birth</label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                     <table border="1">
+                        <tr>
+                            <tr>
+                                <input type="date">
+                               
+                            </tr>
+                        </tr>
+
+                     </table>
+
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                     <button type="submit">Submit</button>
+
+                    </td>
+                </tr>
+            </table>
+
+            <hr>
+
+            <form>
+            <table>
+                <tr>
+                    <td>
+                      <label>Degree</label>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                     <table border="1">
+                        <tr>
+                            <tr>
+                                <input type="checkbox">SSC
+                                <input type="checkbox">HSC
+                                <input type="checkbox">BSc
+                               
+                            </tr>
+                        </tr>
+
+                     </table>
+
+                    </td>
+                </tr>
+                 <tr>
+                    <td>
+                     <button type="submit">Submit</button>
+
+                    </td>
+                </tr>
+            </table>
+
+
+            <hr>
+
+        </form>
+        <form>
+            <table>
+                <tr>
+                    <td><label>Blood Group</label></td>
+                    <td>
+                        <select>
+  <option value="A+">A+</option>
+  <option value="A-">A-</option>
+  <option value="B+">B+</option>
+  <option value="B-">B-</option>
+  <option value="AB+">AB+</option>
+  <option value="AB-">AB-</option>
+  <option value="O+">O+</option>
+    <option value="O-">O-</option>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="submit">Submit</button>
+
+
+                    </td>
+                </tr>
+
+            </table>
+        </form> 
+        <hr>
+
+        <form >
+            <table>
+                <tr>
+                    <td><label>Profile picture</label></td>
+                </tr>
+                <tr>
+                    <td><label>User Id</label></td>
+                    <td><input type="text"></td>
+                </tr>
+                <tr>
+                    <td><label>Picture</label></td>
+                    <td><Button type="submit" ><input type="file" accept="image/*"></Button></td>
+
+                </tr>
+
+            </table>
+        </form>
+  
+    
+
+</select>
+<br>
+
+        
+    </body>
+</html>
